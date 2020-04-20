@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<title>IEEE 802.11 b/g/n Wireless Access Point/Client/Bridge</title>
+<META HTTP-EQUIV="expires" CONTENT="0">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<body onload="do_focus()" align="center">
+<FORM name="LoginForm" method="post" action=/login>
+<center>
+<div align=center style="position:relative;HEIGHT: 222px;">
+  <img style="position:relative; clip:rect(0px 980px 100px 35px);" src="{{url_for('static', filename='topbg3.gif')}}">
+</div>
+<table align=center cellpadding="6" border="0" width="100%">
+  <!--tr><td align="right" width="33%">
+    <a href="#" onclick="javascript:closeWindow();" target= _top>Exit</a>
+  </td></tr-->
+  <tr>
+    <td width="38%" align=right><b><font face="Verdana,Arial" color="#000000" size=-1>Name</font></b></td>
+    <td width="57%" align=left><input type=text name="username" value="{{request.form.username}}" size=32 maxlength=32 style="WIDTH: 227px; HEIGHT: 22px"></td>
+  </tr>
+  <tr>
+    <td align=right>
+      <b><font face="Verdana,Arial" color="#000000" size=-1>Password</font></b></td>
+    <td align=left>
+      <input type=password name="password" value="{{request.form.password}}" size=32 maxlength=19 style="WIDTH: 227px; HEIGHT: 22px">
+      <b><font face="Verdana,Arial" color="#000000" size="3">Wrong username or password</font></b>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="48%" align="right"><input name="Loginsubmitbtn" type="submit" value="Login" ></td>
+    <td width="2%"></td>
+    <td width="50%" align="left"><input type="button" name="ResetBtn" value="Reset" onclick="document.loginfrm.Loginpassword.value='';do_focus();"></td>
+  </tr>
+</table>
+</form>
+{% if error %}
+    <p class="error"><strong>Error:</strong> {{error}}
+{% endif %}
+</center>
+
+<p>&nbsp;</p>
+</body>
+</html>
